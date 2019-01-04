@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
+Route::resource('/painel/chamado/', 'Painel\ChamadoControler');
+
+Route::resource('/painel/cadastro', 'Painel\CadastroControler');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
